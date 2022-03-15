@@ -1,4 +1,4 @@
-package com.cydeo.step_definition;
+package com.cydeo.step_definitions;
 
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Then;
