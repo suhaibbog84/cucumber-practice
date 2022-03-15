@@ -1,4 +1,4 @@
-package com.cydeo.utility;
+package com.cydeo.utilities;
 
 import org.junit.Assert;
 
