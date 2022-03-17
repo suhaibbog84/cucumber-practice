@@ -15,12 +15,14 @@ Feature: Library app login feature
 
   @student
   Scenario: Login as student
+    Given user is on the library login page
     When user enters student username
     And user enters student password
     Then user should see the dashboard
 
   @admin @employee
   Scenario: Login as admin
+    Given user is on the library login page
     When user enters admin username
     And user enters admin password
     Then user should see the dashboard
