@@ -20,7 +20,6 @@ public class Login_StepDefinitions {
     @Then("user should see the dashboard")
     public void user_should_see_the_dashboard() {
         System.out.println("User should see the dashboard");
-
     }
 
     @When("user enters student username")
