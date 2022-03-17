@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definitions",
         dryRun = false,
-        tags = "@wip" //whatever annotation we pass here it will be executed
+        tags = "@Regression" //whatever annotation we pass here it will be executed
 )
 public class CukesRunner {
 }
