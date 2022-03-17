@@ -1,4 +1,4 @@
-@Regression @smoke
+@Regression @smoke @login
 Feature: Library app login feature
   User Story:
   As a user, I should be able to login with correct credentials to different
@@ -9,7 +9,7 @@ Feature: Library app login feature
   Background: For the scenarios in this feature files, user is expecting to be on login page
     Given user is on the library login page
 
-  @librarian @employee @wip
+  @librarian @employee @wip_Suhaib
   Scenario: Login as librarian
     When user enters librarian username
     And user enters librarian password
