@@ -1,11 +1,30 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.page.GoogleSearchPage;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 
 public class GoogleStepDefinitions {
+
+    GoogleSearchPage googleSearchPage = new GoogleSearchPage();
+
+    @When("user types apple and clicks enter")
+    public void userTypesAppleAndClicksEnter() {
+        googleSearchPage.searchBox.sendKeys("apple" + Keys.ENTER);
+    }
+
+    @Then("user sees apple in the google title")
+    public void user_sees_apple_in_the_google_title() {
+        String expectedTitle = "apple - Google Search";
+        String actualTitle = Driver.getDriver().getTitle();
+
+        //Junit accepts expected before actual
+        Assert.assertEquals(expectedTitle, actualTitle);
+        Assert.assertTrue(actualTitle.equals(expectedTitle));
+    }
 
     @When("user is on Google search page")
     public void user_is_on_google_search_page() {
@@ -24,15 +43,7 @@ public class GoogleStepDefinitions {
 
     }
 
-    @When("user types apple and clicks enter")
-    public void userTypesAppleAndClicksEnter() {
-        System.out.println("user types apple and clicks enter");
-    }
 
-    @Then("user sees apple in the google title")
-    public void user_sees_apple_in_the_google_title() {
-        System.out.println("user sees apple in the google title");
-    }
 
 
 }
