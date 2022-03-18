@@ -46,6 +46,8 @@ public class Hooks {
     @AfterStep
     public void afterStep(){
         System.out.println("----------> applying tearDown using @AfterStep");
+
+
     }
 
 }
