@@ -32,10 +32,10 @@ public class GoogleStepDefinitions {
         //Assert.assertTrue(actualTitle.equals(expectedTitle));
     }
 
-    @Then("user sees {word} in the google title")
-    public void user_sees_apple_in_the_google_title2(String searchKeyword) {
+    @Then("user sees apple in the google title")
+    public void user_sees_apple_in_the_google_title2() {
 
-        String expectedTitle = searchKeyword + " - Google Search";
+        String expectedTitle = "apple - Google Search";
         String actualTitle = Driver.getDriver().getTitle();
 
         //Junit accepts expected before actual
