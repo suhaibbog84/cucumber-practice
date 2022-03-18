@@ -22,7 +22,7 @@ public class GoogleStepDefinitions {
         String actualTitle = Driver.getDriver().getTitle();
 
         //Junit accepts expected before actual
-        Assert.assertEquals(expectedTitle, actualTitle);
+        Assert.assertEquals("Title is not as expected", expectedTitle, actualTitle);
         Assert.assertTrue(actualTitle.equals(expectedTitle));
     }
 
