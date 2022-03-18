@@ -11,13 +11,25 @@ public class GoogleStepDefinitions {
 
     GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
-    @When("user types {string} and clicks enter")
-    public void user_types_and_clicks_enter(String string) {
-
+    @When("user types {word} and clicks enter")
+    public void user_types_and_clicks_enter2(String searchKeyword) {
+        googleSearchPage.searchBox.sendKeys(searchKeyword + Keys.ENTER);
     }
-    @Then("user sees {string} in the google title")
-    public void user_sees_in_the_google_title(String string) {
 
+    @When("user types {string} and clicks enter")
+    public void user_types_and_clicks_enter(String searchKeyword) {
+        googleSearchPage.searchBox.sendKeys(searchKeyword + Keys.ENTER);
+    }
+
+    @Then("user sees {string} in the google title")
+    public void user_sees_in_the_google_title(String searchKeyword) {
+
+        String expectedTitle = searchKeyword + " - Google Search";
+        String actualTitle = Driver.getDriver().getTitle();
+
+        //Junit accepts expected before actual
+        Assert.assertEquals("Title is not as expected", expectedTitle, actualTitle);
+        //Assert.assertTrue(actualTitle.equals(expectedTitle));
     }
 
     @When("user types apple and clicks enter")
