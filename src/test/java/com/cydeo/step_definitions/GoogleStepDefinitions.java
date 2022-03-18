@@ -11,8 +11,8 @@ public class GoogleStepDefinitions {
     public void user_is_on_google_search_page() {
 
         Driver.getDriver().get("https://www.google.com");
-
     }
+
     @Then("user should see title is Google")
     public void user_should_see_title_is_google() {
         String expectedTitle = "Google";
@@ -23,5 +23,16 @@ public class GoogleStepDefinitions {
         Driver.closeDriver();
 
     }
+
+    @When("user types apple and clicks enter")
+    public void userTypesAppleAndClicksEnter() {
+        System.out.println("user types apple and clicks enter");
+    }
+
+    @Then("user sees apple in the google title")
+    public void user_sees_apple_in_the_google_title() {
+        System.out.println("user sees apple in the google title");
+    }
+
 
 }
