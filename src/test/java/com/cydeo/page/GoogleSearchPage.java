@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import javax.xml.xpath.XPath;
 import java.awt.print.Pageable;
 
 public class GoogleSearchPage {
@@ -16,7 +17,7 @@ public class GoogleSearchPage {
     }
 
     //we can start locating web elements using @FindBy annotation
-    @FindBy()
+    @FindBy(xpath = "//input[@name='q']")
     public WebElement searchBox;
 
 }
