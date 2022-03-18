@@ -12,8 +12,8 @@ public class GoogleStepDefinitions {
     GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
     @When("user types apple and clicks enter")
-    public void user_types_and_clicks_enter2(String searchKeyword) {
-        googleSearchPage.searchBox.sendKeys(searchKeyword + Keys.ENTER);
+    public void user_types_and_clicks_enter2() {
+        googleSearchPage.searchBox.sendKeys("apple" + Keys.ENTER);
     }
 
     @When("user types {string} and clicks enter")
