@@ -45,4 +45,9 @@ public class WebTable_StepDefinitions {
         webTableLoginPage.login(username, pw);
     }
 
+    @When("User enters below credentials")
+    public void user_enters_below_credentials() {
+
+    }
+
 }
