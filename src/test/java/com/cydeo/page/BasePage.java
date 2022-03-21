@@ -24,5 +24,8 @@ public class BasePage {
     @FindBy(xpath = "//butto[.='Order']")
     public WebElement order;
 
+    @FindBy(xpath = "//butto[.='Logout']")
+    public WebElement logoutButton;
+
 
 }
