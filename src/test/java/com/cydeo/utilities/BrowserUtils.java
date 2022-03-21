@@ -1,7 +1,11 @@
 package com.cydeo.utilities;
 
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class BrowserUtils {
@@ -61,6 +65,19 @@ for given duration
      */
     public static void verifyURLContains(String expectedInURL){
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInURL));
+    }
+
+    public static List<String> dropdownOptionsAsString(WebElement dropdownElement){
+        Select select = new Select(dropdownElement);
+        List<WebElement> actualOptionsAsWebElement = select.getOptions();
+
+        List<String> actualOptions = new ArrayList<>();
+
+        for (WebElement each : actualOptionsAsWebElement) {
+            actualOptions.add(each.getText());
+        }
+
+        return actualOptions;
     }
 
 
