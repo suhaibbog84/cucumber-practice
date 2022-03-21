@@ -14,7 +14,7 @@ Feature: User should be able to login using correct credentials
     When user enters username "Test" password "Tester" and logins
     Then user should see url contains orders
 
-  @wip
+
   Scenario: User should be able to see all 12 months in
   months
   dropdown
@@ -25,6 +25,7 @@ Feature: User should be able to login using correct credentials
 
 Feature: Web table user order feature
 
+  @wip
   Scenario: User should be able to place order and order seen in web table
 
     Given user is already logged in and on order page
