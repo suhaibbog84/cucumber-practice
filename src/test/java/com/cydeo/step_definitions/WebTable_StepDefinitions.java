@@ -1,6 +1,7 @@
 package com.cydeo.step_definitions;
 
 import com.cydeo.page.WebTableLoginPage;
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -36,7 +37,8 @@ public class WebTable_StepDefinitions {
 
     @Then("user should see url contains orders")
     public void user_should_see_url_contains_orders(String expectedInURL) {
-        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInURL));
+
+        BrowserUtils.verifyURLContains("orders");
     }
 
 
