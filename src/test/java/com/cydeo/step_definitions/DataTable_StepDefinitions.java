@@ -5,8 +5,11 @@ import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DataTable_StepDefinitions {
@@ -32,7 +35,17 @@ public class DataTable_StepDefinitions {
         System.out.println("expectedMonths = " + expectedMonths);
 
         Select select = new Select(dropdownsPage.monthDropdown);
+        List<WebElement> actualOptionsAsWebElement = select.getOptions();
 
+        List<String> actualOptions = new ArrayList<>();
+
+        for (WebElement each : actualOptionsAsWebElement) {
+            actualOptions.add(each.getText());
+        }
+
+        Assert.assertEquals(expectedMonths, actualOptions);
+        //Assert will check the size of the list first, of it's matching
+        // it will check and content 1 by 1
     }
 
 
