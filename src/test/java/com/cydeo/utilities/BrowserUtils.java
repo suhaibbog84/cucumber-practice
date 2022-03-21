@@ -67,6 +67,12 @@ for given duration
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInURL));
     }
 
+    /**
+     * this method will accept a dropdown as a webElement and return
+     * all the options text in a list of a String
+     * @param dropdownElement
+     * @return
+     */
     public static List<String> dropdownOptionsAsString(WebElement dropdownElement){
         Select select = new Select(dropdownElement);
         List<WebElement> actualOptionsAsWebElement = select.getOptions();
