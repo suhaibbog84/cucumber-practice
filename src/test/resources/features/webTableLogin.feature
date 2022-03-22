@@ -23,6 +23,4 @@ Feature: User should be able to login using correct credentials
       | password     | Tester |
     Then user should see url contains orders
 
-Feature: Web table user order feature
-
 
