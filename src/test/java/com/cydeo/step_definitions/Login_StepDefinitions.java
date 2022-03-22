@@ -11,24 +11,23 @@ public class Login_StepDefinitions {
     public void user_enters_librarian_username() {
         System.out.println("User enters librarian username");
     }
-
     @When("user enters librarian password")
     public void user_enters_librarian_password() {
         System.out.println("User enters librarian password");
     }
-
     @Then("user should see the dashboard")
     public void user_should_see_the_dashboard() {
         System.out.println("User should see the dashboard");
+
     }
 
     @When("user enters student username")
-    public void user_enters_student_username() {
+    public void userEntersStudentUsername() {
         System.out.println("User enters student username");
     }
 
-    @When("user enters student password")
-    public void user_enters_student_password() {
+    @And("user enters student password")
+    public void userEntersStudentPassword() {
         System.out.println("User enters student password");
     }
 
@@ -43,8 +42,8 @@ public class Login_StepDefinitions {
     }
 
     @Given("user is on the library login page")
-    public void user_is_on_the_library_login_page() {
-        System.out.println("user is on the login page");
+    public void userIsOnTheLibraryLoginPage() {
+        System.out.println("user is on the library login page");
     }
 
 
