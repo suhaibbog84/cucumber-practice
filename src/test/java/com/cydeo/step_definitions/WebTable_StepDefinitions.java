@@ -4,6 +4,7 @@ import com.cydeo.page.WebTableLoginPage;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -57,4 +58,7 @@ public class WebTable_StepDefinitions {
         webTableLoginPage.login(credentials.get("username"), credentials.get("password"));
     }
 
+    @And("user enters costumer name {string}")
+    public void userEntersCostumerName(String arg0) {
+    }
 }
