@@ -44,30 +44,51 @@ public class Order_StepDefinitions {
     //public void user_enters_quantity(String string) {
 //
     //}
+
+    @And("user enters quantity {int}")
+    public void userEntersQuantity(int arg0) {
+        //accepting int argument and sending it using sendKeys() method
+        //Since SendKeys accepts only String we need the following
+        //orderPage.inputQuantity.sendKeys(arg0 + "");
+
+        //clear() method will delete whatever is in the input box
+        //orderPage.inputQuantity.clear();
+
+        //imitating pressing back_space button from keyboard to delete existing input
+        orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE);
+        orderPage.inputQuantity.sendKeys(String.valueOf(arg0));
+    }
     @When("user enters costumer name {string}")
     public void user_enters_costumer_name(String string) {
-
+        orderPage.inputName.sendKeys(string);
     }
     @When("user enters street {string}")
     public void user_enters_street(String string) {
-
+        orderPage.inputStreet.sendKeys(string);
     }
     @When("user enters city {string}")
     public void user_enters_city(String string) {
-
+        orderPage.inputCity.sendKeys(string);
     }
     @When("user enters state {string}")
     public void user_enters_state(String string) {
-
+        orderPage.inputState.sendKeys(string);
     }
     @When("user enters zipcode {string}")
-    public void user_enters_zipcode(String inputZip) {
-
+    public void user_enters_zipcode(String string) {
+        orderPage.inputZip.sendKeys(string);
     }
     @When("user selects credit card type {string}")
     public void user_selects_credit_card_type(String expectedCardType) {
 
         List<WebElement> cardType = orderPage.cardType;
+
+        for (WebElement each : cardType) {
+
+            if (each.getAttribute("value").equalsIgnoreCase(expectedCardType)) {
+                each.click();
+            }
+        }
     }
     @When("user enters credit card number {string}")
     public void user_enters_credit_card_number(String string) {
@@ -86,13 +107,5 @@ public class Order_StepDefinitions {
 
     }
 
-    @And("user enters quantity {int}")
-    public void userEntersQuantity(int arg0) {
-        //accepting int argument and sending it using sendKeys() method
-        //Since SendKeys accepts only String we need the following
-        //orderPage.inputQuantity.sendKeys(arg0 + "");
 
-        orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE);
-        orderPage.inputQuantity.sendKeys(String.valueOf(arg0));
-    }
 }
