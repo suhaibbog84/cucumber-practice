@@ -37,4 +37,5 @@ public class OrderPage extends BasePage{
     @FindBy(name = "card")
     public List<WebElement> cardType;
 
+
 }
