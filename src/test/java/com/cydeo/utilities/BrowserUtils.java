@@ -92,7 +92,7 @@ for given duration
      * @param radioButtons
      * @param attributeValue
      */
-    public static void clickTadioButton(List<WebElement> radioButtons, String attributeValue){
+    public static void clickRadioButton(List<WebElement> radioButtons, String attributeValue){
 
         for (WebElement each : radioButtons) {
 
