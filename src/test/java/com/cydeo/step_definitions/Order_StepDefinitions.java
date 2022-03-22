@@ -2,7 +2,7 @@ package com.cydeo.step_definitions;
 
 import com.cydeo.page.BasePage;
 import com.cydeo.page.OrderPage;
-import com.cydeo.page.ViewAllOrderPage;
+import com.cydeo.page.ViewAllOrdersPage;
 import com.cydeo.page.WebTableLoginPage;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.ConfigurationReader;
@@ -13,10 +13,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.List;
 
 public class Order_StepDefinitions {
 
