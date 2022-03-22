@@ -5,9 +5,11 @@ import com.cydeo.page.OrderPage;
 import com.cydeo.page.WebTableLoginPage;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 
 public class Order_StepDefinitions {
@@ -35,10 +37,10 @@ public class Order_StepDefinitions {
         select.selectByVisibleText(string);
 
     }
-    @When("user enters quantity {string}")
-    public void user_enters_quantity(String string) {
-
-    }
+   // @When("user enters quantity {string}")
+    //public void user_enters_quantity(String string) {
+//
+    //}
     @When("user enters costumer name {string}")
     public void user_enters_costumer_name(String string) {
 
@@ -80,4 +82,13 @@ public class Order_StepDefinitions {
 
     }
 
+    @And("user enters quantity {int}")
+    public void userEntersQuantity(int arg0) {
+        //accepting int argument and sending it using sendKeys() method
+        //Since SendKeys accepts only String we need the following
+        //orderPage.inputQuantity.sendKeys(arg0 + "");
+
+        orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE);
+        orderPage.inputQuantity.sendKeys(String.valueOf(arg0));
+    }
 }
