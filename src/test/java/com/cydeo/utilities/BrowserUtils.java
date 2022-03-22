@@ -86,5 +86,14 @@ for given duration
         return actualOptions;
     }
 
+    public static void clickTadioButton(List<WebElement> radioButtons, String attributeValue){
+
+        for (WebElement each : radioButtons) {
+
+            if (each.getAttribute("value").equalsIgnoreCase(attributeValue)) {
+                each.click();
+            }
+        }
+    }
 
 }
