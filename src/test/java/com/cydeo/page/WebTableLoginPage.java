@@ -23,30 +23,31 @@ public class WebTableLoginPage {
 
     /**
      * No parameters.
-     * When we call this method it will directly login using username Test
-     * password Tester
+     * When we call this method, it will directly login using
+     *
+     * Username: Test
+     * Password: Tester
      */
     public void login(){
-        this.inputUsername.sendKeys("test");
+        this.inputUsername.sendKeys("Test");
         this.inputPassword.sendKeys("Tester");
         this.loginButton.click();
-        //this keyword here is not neccessary, but we put it for the example only
     }
 
     /**
-     * This method will accept two argument and login
+     * This method will accept two arguments and login.
      * @param username
      * @param password
      */
     public void login(String username, String password){
-
         inputUsername.sendKeys(username);
         inputPassword.sendKeys(password);
         loginButton.click();
     }
 
     /**
-     * This method will login using credentials from Config Properties
+     * This method will log in using credentials from
+     * configuration.properties
      */
     public void loginWithConfig(){
         inputUsername.sendKeys(ConfigurationReader.getProperty("web.table.username"));
