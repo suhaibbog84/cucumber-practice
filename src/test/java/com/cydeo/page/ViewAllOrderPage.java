@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ViewAllOrderPage {
+public class ViewAllOrderPage extends BasePage{
 
     public ViewAllOrderPage(){
         PageFactory.initElements(Driver.getDriver(), this);
