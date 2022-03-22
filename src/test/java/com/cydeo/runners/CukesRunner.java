@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definitions",
         dryRun = false,
-        tags = "@smoke"
+        tags = "@maleScientists"
 ) //whatever annotation we pass here it will be executed
 
 public class CukesRunner {
