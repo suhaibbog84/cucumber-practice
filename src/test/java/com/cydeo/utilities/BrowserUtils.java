@@ -86,6 +86,12 @@ for given duration
         return actualOptions;
     }
 
+    /**
+     * This method will accept a group radio buttons as a List of WebElement.
+     * It will loop through the List, and click to the radio button with provided attributeValue
+     * @param radioButtons
+     * @param attributeValue
+     */
     public static void clickTadioButton(List<WebElement> radioButtons, String attributeValue){
 
         for (WebElement each : radioButtons) {
